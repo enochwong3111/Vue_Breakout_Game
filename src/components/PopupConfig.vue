@@ -4,13 +4,16 @@ export default {
         setting: {
             title: true,
             buttonsNum: 1,
-            body: false,
+            body: true,
             close: false,
-            width: 300,
+            width: 500,
         },
         content: {
             title: {
                 "en_GB": "You Lose",
+            },
+            remark: {
+                "en_GB": "Too difficult?<br> Don't worry! You can change the paragraph content to a shorter one, or lower the paddle physical coefficient in the game setting."
             },
             buttons: [
                 {
@@ -23,13 +26,16 @@ export default {
         setting: {
             title: true,
             buttonsNum: 1,
-            body: false,
+            body: true,
             close: false,
             width: 300,
         },
         content: {
             title: {
                 "en_GB": "You Win",
+            },
+            remark: {
+                "en_GB": "Thanks for playing! New functions unlock in the game setting."
             },
             buttons: [
                 {

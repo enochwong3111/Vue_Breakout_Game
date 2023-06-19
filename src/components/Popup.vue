@@ -20,7 +20,7 @@ export default {
                     {name: "1", val: '0'},
                     {name: "2", val: '1'},
                 ],
-                coef: 0.8,
+                coef: 0.3,
                 coefs: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
                 blickContVisibility: '0',
                 paragraphInput: '',
@@ -122,6 +122,16 @@ export default {
                 </div>
             </div>
         </template>
+        <template v-else-if="type === 'lose'">
+            <div v-show="config.setting.body" class="body lose">
+                <div v-html="config.content.remark[lang]"></div>
+            </div>
+        </template>
+        <template v-else-if="type === 'win'">
+            <div v-show="config.setting.body" class="body win">
+                <div v-html="config.content.remark[lang]"></div>
+            </div>
+        </template>
         <div class="foot" v-show="config.setting.buttonsNum > 0">
             <div class="buttonPanel">
                 <div class="button" v-for="(button, index) in config.content.buttons" :key="index" @click="callbacks[type][index]">{{ button[lang] }}</div>
@@ -217,6 +227,10 @@ export default {
             .lock::after {
                 content: " 🔒";
             }
+        }
+
+        &.lose, &.win {
+            font-size: 20px;
         }
         
     }

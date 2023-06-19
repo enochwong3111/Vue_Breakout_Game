@@ -12,7 +12,7 @@
                 maxSpeed: 600, // px per second
                 timeoutPointer: null,
                 speed: 0,
-                physicalCoefficient: 0.8
+                physicalCoefficient: 0.3
             }
         },
         methods: {
